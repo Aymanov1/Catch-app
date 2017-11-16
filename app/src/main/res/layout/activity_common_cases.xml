@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#ABB7B7"
+    tools:context="com.example.com.firstaid.CommonCases">
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_backcon"
+                android:layout_height="32dp" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:onClick="Gotobleeding"
+                    android:background="@drawable/bg_rounded_corner">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ic_bleed_icon"
+                        android:layout_gravity="center"
+                        android:onClick="Gotobleeding"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="bleeding"
+                        android:textSize="18sp"
+                        android:onClick="Gotobleeding"
+                        android:textColor="#35404d"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:onClick="Gotofainting"
+                    android:background="@drawable/bg_rounded_corner">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ic_fainting"
+                        android:layout_gravity="center"
+                        android:onClick="Gotofainting"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="fainting"
+                        android:textSize="18sp"
+                        android:onClick="Gotofainting"
+                        android:textColor="#35404d"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:onClick="GotoHeartAttack"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_rounded_corner">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:onClick="GotoHeartAttack"
+                        android:src="@drawable/ic_heart_icon"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="HeartAttack"
+                        android:textSize="18sp"
+                        android:onClick="GotoHeartAttack"
+                        android:textColor="#35404d"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:onClick="GotoBreaking"
+                    android:gravity="center"
+                    android:background="@drawable/bg_rounded_corner">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ic_break"
+                        android:onClick="GotoBreaking"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Breaking"
+                        android:onClick="GotoBreaking"
+                        android:textSize="18sp"
+                        android:textColor="#35404d"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+
+</LinearLayout>
+
+    </FrameLayout>
+    </ScrollView>
+    </RelativeLayout>

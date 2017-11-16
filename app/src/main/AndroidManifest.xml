@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="materialtest.vivz.slidenerd.materialtest" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Always required on api < 21, needed to keep a wake lock while your job is running -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Required on api < 21 if you are using setRequiredNetworkType(int) -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Required on all api levels if you are using setPersisted(true) -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+    <uses-permission android:name="android.permission.CONTROL_LOCATION_UPDATES"></uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+    <meta-data
+        android:name="com.google.android.maps.v2.API_KEY"
+        android:value="@string/google_maps_key" />
+    <application
+        android:name="materialtest.vivz.AreYouHealthy.materialtest.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.ActivityMain"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.ActivityTouchEvent"
+            android:label="@string/title_activity_sub" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="materialtest.vivz.AreYouHealthy.activities.ActivityMain" />
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.ActivitySlidingTabLayout"
+            android:label="@string/title_activity_activity_using_tab_library" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.ActivityVectorDrawable"
+            android:label="@string/title_activity_vector_test" >
+        </activity>
+
+        <service
+            android:name="materialtest.vivz.AreYouHealthy.services.ServiceMoviesBoxOffice"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.ActivityDynamicTabs"
+            android:label="@string/title_activity_dynamic_tabs" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.ActivityRecylerAnimators"
+            android:label="@string/title_activity_recycler_item_animations" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.ActivityA"
+            android:label="@string/title_activity_activity_calling" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.ActivityB"
+            android:label="@string/title_activity_activity_called" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.ActivitySharedA"
+            android:label="@string/title_activity_activity_shared" />
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.ActivitySharedB"
+            android:label="@string/title_activity_activity_shared_b" />
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.AreYouHealthy"
+            android:label="AreYouHealthy" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.EnregistrementEtat"
+            android:label="EnregistrementEtat" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.Treatment"
+            android:label="Treatment" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.TestPoulse"
+            android:label="TestPoulse" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.OtherTests"
+            android:label="OtherTests" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.Respiration"
+            android:label="Respiration" >
+        </activity>
+        <activity
+        android:name="materialtest.vivz.AreYouHealthy.fragments.FindMe"
+        android:label="Respiration" >
+    </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.Intro"
+            android:label="Intro" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.activities.MainMenu"
+            android:label="MainMenu" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.fragments.GPSTracker"
+            android:label="@string/title_activity_gpstracker" />
+
+        <service
+            android:name="materialtest.vivz.AreYouHealthy.fragments.SendService"
+            android:enabled="true"
+            android:exported="true" />
+
+
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.fragments.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.fragments.FallActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.fragments.Setting"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.fragments.Bleeding"
+            android:label="@string/title_activity_activity_calling" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.fragments.CommonCases"
+            android:label="@string/title_activity_activity_calling" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.fragments.Breaking"
+            android:label="@string/title_activity_activity_calling" >
+        </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.fragments.chocking"
+            android:label="@string/title_activity_activity_calling" >
+        </activity>
+        <activity
+        android:name="materialtest.vivz.AreYouHealthy.fragments.Fainting"
+        android:label="@string/title_activity_activity_calling" >
+    </activity>
+        <activity
+            android:name="materialtest.vivz.AreYouHealthy.fragments.HeartAttack"
+            android:label="@string/title_activity_activity_calling" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+    </application>
+
+</manifest>
